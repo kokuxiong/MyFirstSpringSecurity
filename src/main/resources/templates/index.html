@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+		xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="UTF-8">
+<title>index page</title>
+</head>
+<body>
+	hello
+	
+	<ul>
+		<li sec:authorize="hasRole('VIP1')"><a th:href="@{/vip1}">go to vip1</a></li>
+		<li sec:authorize="hasRole('ROLE_VIP2')"><a th:href="@{/vip2}">go to vip2</a></li>
+		<li sec:authorize="hasRole('VIP3')"><a th:href="@{/vip3}">go to vip3</a></li>
+	</ul>
+</body>
+</html>
